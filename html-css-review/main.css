@@ -1,0 +1,24 @@
+/*p {*/
+/*    color:peachpuff;  */
+/*    background-color:dodgerblue;*/
+/*}*/
+
+.hotshot {
+    border: 10px groove burlywood;
+}
+
+#main {
+    background-color: blanchedalmond;
+}
+
+.hotshot > span {
+    color:rebeccapurple;
+    margin:20px !important;
+}
+
+/*CSS Specificity*/
+/* element   class    id  */
+/*   2         0       0  */
+/*   0         1       0  */
+/*  5000     20000     0  */
+/*   0         0       1  */
