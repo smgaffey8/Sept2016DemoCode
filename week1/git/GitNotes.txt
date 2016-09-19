@@ -15,3 +15,5 @@ Typical use to push up work:
 To get new files in a repo (for example to get new notes from demo code repo):
 1.) cd to root of repo
 2.) git pull origin master
+
+Note: If you clone the exercise-starters repo, make sure to copy the files you need into your own repo since you will not have access to push to the exercise-starters repo.
