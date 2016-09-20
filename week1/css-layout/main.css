@@ -1,0 +1,80 @@
+h3 {
+    color:#cc8899;
+}
+
+h2 { 
+    background-color: white;
+    color:rgba(55, 89, 244, .5 )
+    
+}
+
+h1 {
+     color:red;
+}
+
+body {
+    background-color: brown;
+    height:10000px;
+}
+
+#container {
+    width: 600px;
+    background-color: yellow;
+    position:relative;
+}
+
+.box {
+    background-color:peachpuff;
+    color:rgba(55,66,88,.5);
+    height:50px;
+    width:20%;
+    border:2px solid;
+    margin: 5px;
+    padding:8px 10px;
+    display:inline-block;
+    box-sizing: border-box;
+}
+
+.super-box {
+    position:relative;
+    display:inline-block;
+    top:10px;
+    left:20px;
+    height:50px;
+    background-color:peru;
+    border:2px black;
+}
+
+.navbar {
+    height:80px;
+    width: 80px;
+    background-color:papayawhip;
+    position:fixed;
+    top:10px;
+}
+
+.imageleft {
+    height:80px;
+    width:80px;
+    background-color: tomato;
+    float:left;
+    padding:10px;
+}
+.imageright {
+    height:150px;
+    width:80px;
+    background-color: tomato;
+    float:right;
+    padding:10px;
+}
+
+.overflow {
+    /*overflow:hidden;*/
+    clear:left;
+    padding:10px;
+    margin:10px;
+}
+
+.overflowNot {
+    clear:left;
+}
