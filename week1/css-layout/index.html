@@ -6,21 +6,23 @@
         </title>
         <link rel="stylesheet" href="main.css" type="text/css"/>
         <style>
-            
+            <!-- we can add style here, but it's better to do it in a separate file -->
         </style>
     </head>
     <body>
-        <h1>Woo woh woh</h1>
+        <!-- we can add style inline with an element, but that makes the code "fragile" and hard to modify consistently -->
+        <h1>Woo woh woh</h1> <!-- header tags h1, h2, h3, h4, h5, h6 all carry different default font sizes as defaults -->
         <h2>hoopla</h2>
         <h3>whoop whoop</h3>
-        <img class="imageleft">
-        <img class="imageright">
+        <img class="imageleft"> <!-- create an image block that will float left -->
+        <img class="imageright"> <!-- create an image block that will float right -->
+        <!-- this text will flow between the images and, depending on our overlow and clear css properties, will flow around the images -->
         <p class='overflow'>t is at is opposed to using 'Coblishing packages efault model text, and a is opposed to using 'Coblishing packages efault model text, and a search for 'lorem ipsum' will uncover  is opposed to using 'Coblishing packages efault model text, and a search for 'lorem ipsum' will uncover  is opposed to using 'Coblishing packages efault model text, and a search for 'lorem ipsum' will uncover  search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
       <p class='overflowNot'>t is ing at ito using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
  
         <section id='container'>
             <div class="box">I am a really long verbose box</div> 
-            <div class="super-box">I am a SUPER box</div>  
+            <div class="super-box">I am a SUPER box</div>  <!-- super-box is positioned absolute in relation to it's relat nearest ancester whose positioning is non-static, typically relative -->
             <div class="box">I am a box</div>   
             <div class="box">I am a box</div>    
             <div class="box">I am a box</div>    
@@ -28,8 +30,8 @@
             <div class="box">I am a box</div>    
             <div class="box">I am a box</div>     
         </section>
-        <footer></footer>
-        <div class='navbar'>
+        <footer></footer> <!-- footer, div, section, etc. are all basic block elements that help to orgranize content and styling but don't actually style the content themselves. -->
+        <div class='navbar'> <!-- navbar is positioned fixed, so it stays in the same position regardless of the scrolling body -->
             <span>Home</span>
             <span>About</span>
             <span>Content</span>

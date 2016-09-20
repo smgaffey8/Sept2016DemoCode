@@ -1,45 +1,57 @@
+
+/* this is a TAG SELECTOR and affects all h3 document elements */
 h3 {
-    color:#cc8899;
+    color:#cc8899; /* colors can be hex values */
 }
 
 h2 { 
-    background-color: white;
-    color:rgba(55, 89, 244, .5 )
-    
+    background-color: white; /* colors can also be names (select colors only) */
+    color:rgba(55, 89, 244, .5 ) /* colors can be rgb - and with rgba you can also add opacity */
 }
 
 h1 {
-     color:red;
+     color:red; 
 }
 
 body {
     background-color: brown;
-    height:10000px;
+    height:10000px;  /* we make this really large to force a scrolling page */
 }
 
+/* this is an ID SELECTOR, starting with a #, and affects all elements that have the container id specified */
 #container {
     width: 600px;
     background-color: yellow;
     position:relative;
 }
 
+/* this is a CLASS SELECTOR, starting with a . (dot), and affects all elements that have the box class specification */
 .box {
     background-color:peachpuff;
     color:rgba(55,66,88,.5);
     height:50px;
     width:20%;
     border:2px solid;
+    /* margin can also be specified as:
+    margin-top: 5px;  or
+    margin:5px 8px 10px 5px;  (top, right, bottom, left) or
+    margin: 5px 10px (top/bottom, right/left) or
+    margin: 5px (all sides)
+    */
     margin: 5px;
+    /* padding has the same top/right/bottom/left specifications that margin does */
     padding:8px 10px;
+    /* display can be block (stack box blocks), inline (no box, no padding), or inline-block (position box blocks next to each other)  */
     display:inline-block;
-    box-sizing: border-box;
+    /* box-sizing: content-box is default and doesn't account for padding and margin when sizing things by %*/
+    box-sizing: border-box; /* this will use the entire box up to the border (but not including the margin) for % sizing */
 }
 
 .super-box {
-    position:relative;
-    display:inline-block;
+    position:absolute;  /* absolute position (top/bottom/right/left) is based on nearest non-static ancestor element */
     top:10px;
     left:20px;
+    display:inline-block;
     height:50px;
     background-color:peru;
     border:2px black;
@@ -49,6 +61,7 @@ body {
     height:80px;
     width: 80px;
     background-color:papayawhip;
+    /* position fixed keeps the element in the same position in the window, regardless of the view scrolling by */
     position:fixed;
     top:10px;
 }
@@ -57,20 +70,20 @@ body {
     height:80px;
     width:80px;
     background-color: tomato;
-    float:left;
+    float:left; /* float left will position this element on the left and affect the content placement of elements to it's right, but not the border box size */
     padding:10px;
 }
 .imageright {
     height:150px;
     width:80px;
     background-color: tomato;
-    float:right;
+    float:right; /* just like float:left, only right! */
     padding:10px;
 }
 
 .overflow {
-    /*overflow:hidden;*/
-    clear:left;
+    overflow:hidden; /* this will trim the margin box to respect a float left/right and have it flow down instead of wrapping around the float */
+    clear:left; /* this clears the float effect to any float that would affect this element on the left. */
     padding:10px;
     margin:10px;
 }
