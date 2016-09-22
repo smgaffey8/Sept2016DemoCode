@@ -1,0 +1,38 @@
+body {
+    background-color: palegoldenrod;
+}
+
+.outer {
+  height: 400px;
+  /* setting the height of a line of text (regardless of actual font height) */
+  /*line-height:600px;*/
+  width:400px;
+  background-color:rebeccapurple;
+  margin:auto;
+  position:relative;
+  /* you can use a table model to vertically center child cells, but probably not what you want unless you really are using tables */
+  /*display:table;*/
+  
+}
+
+.inner {
+    height:100px;
+    width:100px;
+    background-color:skyblue;
+    margin:auto;
+    
+    /*display:block;*/
+    /* only works with a single line of text */
+    /*vertical-align: middle;  */
+    
+    /* great for tables, but not necessarily the best way to vertically center either */
+    /*display:table-cell;*/
+    /*vertical-align:middle;*/
+    position:relative;
+    /* move the top of this element down 50% from it's parent */
+    top:50%;
+    /* adjust this element back up by 50% of the inner element's height to REALLY center it */
+    transform: translateY(-50%);
+    
+    /* you can look into flex box - a new set of layout properties that work well, but are not necessarily compatible with standard css */
+}

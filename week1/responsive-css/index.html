@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive CSS</title>
+        <style>
+            body {
+                background-color: #efefef;
+            }
+
+            p {
+                clear: both;
+            }
+
+            .boxes {
+                /*font-size: 0;*/
+            }
+
+            .box {
+                width: 100%;
+                height: 200px;
+                background-color: palegoldenrod;
+                border: 1px solid black;
+                /*font-size: 20px;*/
+                padding: 20px;
+                box-sizing: border-box;
+                float: left;
+                /*display: inline-block;*/
+            }
+
+            .clear {
+                clear: both;
+            }
+
+            @media (min-width: 720px) {
+                body {
+                    background-color: black;
+                    color: white;
+                }
+            }
+
+            @media (max-width: 720px) {
+                body {
+                    color: red;
+                }
+
+                .box {
+                    width: 33%;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .box {
+                    width: 25%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello Squirrel!</h1>
+
+        <div class="boxes">
+            <p> Yo dawg </p>
+            <div class="box">You</div>
+            <div class="box">Can't</div>
+            <div class="box">See this text :(</div>
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>
