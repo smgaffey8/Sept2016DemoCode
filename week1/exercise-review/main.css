@@ -1,0 +1,230 @@
+/* ADD YOUR STYLES HERE */
+
+/* Horizontal centering */
+.horizontal {
+    padding:30px;
+    text-align:center;
+    /*display:flex;
+    flex-direction:row;
+    justify-content:space-around;*/
+}
+
+.horizontal>img {
+    padding:12px;
+}
+
+
+/* Vertical centering */
+/* another way of doing the same kind of thing */
+/*.inline {
+    display:inline-block;
+    vertical-align:top;
+    padding:20px;
+}*/
+
+.center img, .center p, .center ol {
+    display:inline-block;
+    vertical-align:top;
+    padding:20px;
+}
+
+.vertical {
+    padding:100px 0px;
+}
+
+/* the method below is more flexible, using percentages instead of absolute
+  values like below.  If the height changes, you'd have to tweak the padding values 
+  to match. */
+/* center vertical with images */
+.centered {
+    display:inline-block;
+}
+.centered>img, .centered div {
+    display:inline-block;
+    vertical-align:middle;
+    padding-top:50%;
+    padding-bottom:50%;
+}
+
+/* you can also use a table and table-cell to vertically align a block element */
+/*.center-vertical-container {
+    height:300px;
+    display:table;
+}
+
+.centered {
+    display: table-cell;
+    vertical-align:middle;
+}*/
+
+/* vertically spaced, different elements */
+/* same as above */
+
+/* horizontal list */
+.horizontal-list>li {
+    display:inline-block;
+    list-style-type:none;
+    float:left;
+    padding:0;
+}
+
+/* buttons */
+.buttons{
+    color:white;
+    font-weight:bolder;
+    background-color:#f55858;
+    font-size:larger;
+    text-decoration:none;
+    border-radius:5px;
+    display:inline-block;
+}
+.button0{
+    padding:40px 70px;
+    font-size:x-large;
+}
+.button1{
+    padding:20px 50px;
+}
+.button2{
+    padding:10px 20px;
+}
+
+/* buttons different of types */
+/* same as above using buttons and button1 */
+/* if you can devise a way to act on various elements and get the same (centering) results that's ideal */
+
+/* Navigation */
+.navbar ul {
+    list-style-type:none;
+    margin:0px;
+    padding:0;
+    overflow:hidden;
+    background-color:#ff9999;
+    border-radius:5px;
+}
+.navbar li {
+    float:left;
+    width:20%;
+}
+
+.navbar li a{
+    display:block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+}
+.navbar li a:hover {
+    background-color:rebeccapurple;
+}
+
+/* Pagination */
+/* we hurried through this and never removed the underscore from the elements on the ends,
+   but this has the bulk of the work, in two different ways. */
+/*
+.pagination {
+    display:inline;
+    text-decoration:underline;
+    color:pink;
+}
+.pagination li {
+    display:inline;
+    list-style-type:none;
+}
+
+.pagination a {
+    width:25px;
+    text-align:center;
+    font-size:medium;
+}
+.pagination li a {
+    border-bottom:solid;
+    border-bottom-width: medium;
+    border-bottom-color:pink;
+}*/
+
+/*.end-link a {
+    text-decoration:none !important;
+}
+.pagination span {
+    color:light-gray !important;
+}*/
+
+.pagination {
+    list-style:none;
+    padding:0px;
+    margin:0px;
+    display:inline-flex;
+    font-size:large;
+    font-weight:bold;
+}
+
+.pagination li a  {
+    padding:12px 12px;
+    color:#f55858;
+}
+
+.active {
+    color:gray;
+    text-decoration:underline;
+}
+
+/* Comment Stream */
+.stream-text {
+    margin-left:90px;
+}
+.comment-stream {
+    margin:auto;
+    position:relative;
+}
+.comment-stream img {
+    float:left;
+}
+.last-stream {
+    display:inline-block;
+    margin-top:25px;
+}
+.last-stream img {
+    float:left;
+}
+.indent-stream {
+    display:inline;
+    padding:50px;
+}
+time {
+    color:gray;
+    font-size:10px;
+}
+
+/* Tabs */
+/* the trick here is to move the window up slightly and the tabs down slightly so 
+   that their borders overlap.  */
+.tabs {
+    display:inline;
+    padding-left:5px;
+}
+.tabs li {
+    display:inline-block;
+}
+.tabs li a {
+    text-decoration-line:none;
+    color:dodgerblue;
+}
+.tab-obj:hover {
+    cursor:pointer;
+}
+.tab-obj{
+    padding:8px;
+    border:1px solid lightgray;
+    border-radius:10px 10px 0 0;
+}
+.window {
+    border:1px solid lightgray;
+    padding:10px;
+}
+/* ideally, we would make this border transparent instead of white so that if the background
+    color of the tab and window changed, the border would still disappear instead of painting
+    over it with white as we are doing here. */
+.tabs:active {
+    border-bottom:1px solid white;
+}
