@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Title
+        </title>
+    </head>
+    <body>                                      // this is document.querySelector('body'')
+        <h1>Header one</h1>                     // this is document.querySelectorAll('h1')[0] or document.querySelector('h1')
+        <h2 id="h2ID">Header two A</h2>         // this is document.querySelector('h2')
+        <h2 class="h2Class">Header two B</h2>   // this is document.querySelector('.h2Class')
+        <div id="div-1">                        // this is document.querySelector('#div-1')
+            <div>text</div>
+            <p>some text</p>                    // this is document.querySelector('p')           
+        <div id="div-1">                        // this is document.querySelector('#div-1')
+        </div>
+        <div class="h-centered v-rt-aligned">   // this is document.querySelector('.h-centered') or document.querySelector('.v-rt-aligned')
+            I'm div 2
+        </div>
+        <div>                                   // this is document.querySelectorAll('div')[4] - the 5th div element in this document
+            I'm div 3
+        </div>
+        <div>
+            I'm div 4
+        </div>
+        <div>
+            I'm div 5
+        </div>
+    </body>
+</html>
+
+<!--I can get at and manipulate document elements like this:
+
+var el = document.querySelectorAll('#div-1')[0];
+el.addEventListener("click", function() {
+    el.innerHTML = "change my text";
+});-->
