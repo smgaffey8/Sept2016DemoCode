@@ -10,9 +10,9 @@
         ```bash
         $ npm -install http-server -g
         ```
-3. Now you can run a local HTTP server by going to the directory in which you have the files to be served (ie. ~/workspaces/project1) and running the `http-server` command. In this directory, be sure to have an `index.html`.
+3. You can now run a local HTTP server by running the `http-server` command in the directory containing your files to be served (e.g. `~/workspaces/project1`). In this directory, be sure to have an `index.html`.
 
-Then, you can go to your web browser and navigate to the URL http://localhost:8080 to see the files in that directory.
+Then, you can go to [localhost](http://localhost:8080) your web browser, which will render `index.html`.
 
 ## Animation/Transformations
 `marquee` is an old, deprecated HTML tag that moves an HTML block left, right, up or down. However, `css` now has new styles that can do this better, with more granular control.
@@ -23,5 +23,7 @@ The `css` attributes you want to research are:
 - `right`
 - `top`
 - `bottom`
+- `transition`
+- `transform`
 
-Then use `transition` and `transform` to begin animation. See demo code for an example that compares a PacMan animation done in `marquee` and then done in `css`.
+See the demo code in this directory for an example that compares a PacMan animation done in `marquee` and then done in `css`.
