@@ -1,0 +1,30 @@
+.scroll-right {
+     /* position: relative; */
+    /*
+        sets the image, and all other child
+        elements of .scroll-right, be positioned
+        relative to .scroll-right
+    */
+}
+
+.scroll-right img {
+     /*position: absolute;*/
+     /*left: 0;*/
+     /*transition: left 10s linear 0s;*/
+     transform: translateX(0%);
+     opacity: 1;
+     border: none;
+     transition:
+        transform 5s ease-in-out 0s,
+        border 5s ease-in-out 0s,
+        opacity 5s ease-out 500ms;
+}
+
+.scroll-right img.animate {
+    /*left: 50%;*/
+    opacity: 0;
+    border: 10px dotted black;
+    transform: translateX(100vw);
+}
+
+/* High performance properties: tranforms, opactiy, scale. */
