@@ -27,4 +27,4 @@
     transform: translateX(100vw);
 }
 
-/* High performance properties: tranforms, opactiy, scale. */
+/* High performance properties: tranform (translate, scale, rotate) & opactiy */
