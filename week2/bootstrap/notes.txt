@@ -1,0 +1,39 @@
+Bootstrap
+
+What is it? 
+-It's a very popular CSS framework made by Twitter
+
+-Essentially a bunch of predefined class selectors with pre defined CSS rules
+-Focused on responsive and mobile-first development
+
+Bootstrap comes with lots of components:
+-Normalization
+-Typography (Fonts, sizes, etc)
+-Layout (Grid system)
+-Forms
+-Buttons
+
+Grid system
+12 column layout 
+12/12 columns = 100% width
+6/12 columns = 50% witdth
+
+You NEED to have these classes for the grid system to work
+1.) .container / .container-fluid
+2.) .row
+3.) .col-ScreenSize-columns
+    Ex: .col-xs-6  (for extra small screens, it will take up 6/12 columns)
+
+    Sizes: xs, sm, md, lg
+
+    .col-xs-12 .col-lg-6 (can combine classes to set the look for multiple screen sizes)
+
+    .col-xs-8 .col-xs-offset-2 (take up 75% of width and offset from the left by 2 columns)
+
+    Row heights become the height of the TALLEST column
+
+
+
+
+
+
