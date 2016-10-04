@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Repeat</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+        <script src="main-scope.js"></script>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body ng-controller="mainCtrl">
+        <h1>Hello World!</h1>
+
+        <ul>
+            <li ng-repeat="dwarf in dwarves">{{ $index }} --- {{ dwarf }}</li>
+        </ul>
+       
+        <ul>
+            <li ng-repeat="(dwarfIndex, dwarf) in dwarves">{{ dwarfIndex }} --- {{ dwarf }}</li>
+        </ul>
+
+        <ul>
+            <li ng-repeat="dwarf in dwarves">
+                <span ng-show="$first">First, there was {{ dwarf }}.</span>
+                <span ng-show="$middle">Then, there was {{ dwarf }}.</span>
+                <span ng-show="$last">Lastly, there was {{ dwarf }}.</span>
+            </li>
+        </ul>
+
+        <ul>
+            <li ng-repeat="(dwarfName, dwarfDescription) in dwarvesObj">{{ dwarfName }} --- {{ dwarfDescription }}</li>
+        </ul>
+
+        <ul>
+            <li ng-repeat="dwarf in cloneDwarves track by $index">{{ $index }} --- {{ dwarf }}</li>
+        </ul>
+
+<!-- arrObjDwarves.orderBy('name') -->
+<!-- $scope.property = "name" -->
+        <ul>
+            <li ng-repeat="dwarf in arrObjDwarves | orderBy: 'name'">
+                <h1 ng-click="logDwarf(dwarf)">{{ dwarf.name }}</h1>
+                <ul>
+                    <li ng-repeat="hobby in dwarf.hobbies">{{ hobby }}</li>
+                </ul>
+
+            </li>
+        </ul>
+
+    </body>
+</html>
