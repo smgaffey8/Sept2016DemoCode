@@ -1,0 +1,17 @@
+Modals / forms in angular
+    - submitting a form that's inside of a Modal
+    - bootstrap + angular
+
+Event objects
+
+When do things happen in the browser?  What order?
+    - "moustache flash"
+
+Debugger
+
+
+                    SuperMainModule
+            |       |       |          |
+        CommentBox Photo   Business  AdminTool
+
+

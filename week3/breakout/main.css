@@ -1,0 +1,9 @@
+.spell-item{
+    border:thin solid peachpuff;
+    border-radius:4px;
+    background-color:gainsboro;
+}
+.warning-text{
+    color:red;
+    font-size:18px;
+}
