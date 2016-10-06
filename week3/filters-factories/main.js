@@ -11,6 +11,18 @@ function parkingController(locationFact) {
     park.greeting = "HELLO";
 
     park.lots = locationFact.lots;
+    park.restaurants = locationFact.restaurants;
+
+    park.filterLots = function(element, index) {
+        // if(element.capacity > 30){
+        //     return true;
+        // }
+        // else {
+        //     return false;
+        // }
+
+        return element.capacity > 30;
+    }
 }    
 
 function restaurantController(locationFact) {
@@ -18,6 +30,13 @@ function restaurantController(locationFact) {
     rest.greeting = "HELLO2";
 
     rest.restaurants = locationFact.restaurants;
+    rest.lots = locationFact.lots;
+
+    rest.restFilter = {};
+
+    rest.getNearestLot = function(index) {
+        return rest.lots[index].location;
+    }
 }
 
 function locationFactory() {
@@ -60,6 +79,25 @@ function locationFactory() {
     // The only thing you absolutely have to have in a factory is a RETURN statement
     return {
         lots: lotsData,
-        restaurants: restaurantsData
+        restaurants: restaurantsData,
     }; // it is very common to return an object here
 }
+
+
+// Filters
+// Filters are used to FORMAT values
+    // they take an input value and provide a transformed output
+
+// Built in filters:
+// currency
+// number
+// date
+// uppercase
+// lowercase
+
+// Special built in filters:
+// orderBy
+// filter
+
+// {{ expression | filter:args }}
+// args are generally optional
