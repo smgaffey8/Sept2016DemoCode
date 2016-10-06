@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="Watapp">
+    <head>
+        <title>Map</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body>
+        <h1>Welcome to our map!</h1>
+
+        <section ng-controller="parkingCtrl as park">
+            <h2>Lots:</h2>
+            <ul>
+                <li ng-repeat="lot in park.lots">
+                    {{lot.capacity}}
+                    {{lot.cost}}
+                    {{lot.location}}
+                </li>
+            </ul>
+
+        </section>
+
+        <hr>
+
+        <section ng-controller="restaurantCtrl as rest">
+            <h2>Restaurants:</h2>
+            <ul>
+                <li ng-repeat="resta in rest.restaurants">
+                    {{resta.name}}:
+                    {{resta.style}}
+                    <ul>
+                        <li ng-repeat="item in resta.menu">
+                            {{item}}
+                        </li>    
+                    </ul>    
+                </li>
+            </ul>
+        </section>
+    </body>
+</html>
