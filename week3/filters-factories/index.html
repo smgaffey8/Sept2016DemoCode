@@ -16,7 +16,7 @@
                 <li ng-repeat="resta in rest.restaurants | filter:rest.restFilter">
                     {{resta.name}}:
                     {{resta.style}} - 
-                    <!--{{rest.getNearestLot($index)}}-->
+                    {{rest.getNearestLot($index)}}
                     <ul>
                         <li ng-repeat="item in resta.menu">
                             {{item}}
