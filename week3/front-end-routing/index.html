@@ -6,13 +6,29 @@
         <script src="main.js"></script>
     </head>
     <body ng-controller="SoFreshAndSoCremeCreme as cCtrl">
-        HELLO
 
-        {{cCtrl.greeting}}
+        <nav>
+            <ul>
+                <li>
+                    <a href="#/">Home</a>
+                </li>
+                <li>
+                    <a href="#/origins">Origins</a>
+                </li>
+                <li>
+                    <a href="#/menu">Menu</a>
+                </li>
+            </ul>
+        </nav>
+
 
         <ng-view>
             <!--This is where our html templates will go-->
         </ng-view>    
+
+        <footer>
+            Copyright 2016
+        </footer>
 
     </body>
 </html>
