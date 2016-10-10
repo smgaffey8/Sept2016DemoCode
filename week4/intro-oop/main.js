@@ -7,8 +7,10 @@ var name = "bill"
 var name2 = "sally"
 var name3 = "john"
 var address = "123 main st"
+var address2 = "234 main st"
 //...
 
+// 
 var people = [
     {
         name: "bill",
@@ -23,10 +25,10 @@ var people = [
 
 // just an object, not a blueprint
 // var Cat = {
-//     this.name: '',
-//     this.color: '',
-//     this.breed: '',
-//     this.declawed: false,
+//     name: '',
+//     color: '',
+//     breed: '',
+//     declawed: false,
 // }
 
 // ES5 syntax - older way, but more true to what is actually going on
