@@ -82,9 +82,74 @@ class Cat2 {
 var Garfield = new Cat2("Garfield","Orange", "Fat", true);
 var Felix = new Cat2("Felix", "Mud brown", "Tomcat", false);
 
+// In class challenge I:
 
 // Make a class constructor for breakfast cereals 
 // name => String
 // sweetness => Number
 // crunchFactor => Number
 // mascotName = String
+
+
+// ES6
+class Cereal{
+    constructor(name, sweetness, crunchFactor, mascotName){
+        this.name = name;
+        this.sweetness = sweetness;
+        this.crunchFactor = crunchFactor;
+        this.mascotName = mascotName;
+        this.servings = 4;
+    }
+
+    makeYouFat() {
+        console.log("Eating " + this.mascotName + "'s cereal will make you fat!")
+    }
+
+    pour() {
+        if(this.servings <= 0) {
+            console.log("None left!");
+            return;
+        }
+        this.servings--;
+
+        if(this.servings === 1) {
+            console.log("You're almost out!");
+        } else if (this.servings === 0) {
+            console.log("Empty! Time to buy a new box");
+        }
+
+        console.log("Crunch crunch");
+    }
+
+    buyNewBox() {
+        this.servings = 4;
+    }
+}
+
+// ES5
+function Cereal2(name, sweetness, crunchFactor, mascotName) {
+    this.name = name;
+    this.sweetness = sweetness;
+    this.crunchFactor = crunchFactor;
+    this.mascotName = mascotName;
+    this.servings = 4;
+}
+
+Cereal2.prototype.makeYouFat = function() {
+    console.log("Eating " + this.mascotName + "'s cereal will make you fat!")
+}
+
+// create instances of the classes
+var CinnamonToastCrunch = new Cereal("Cinnamon Toast Crunch", 10,
+4, "Toothless McGee");
+var CinnamonToastCrunch2 = new Cereal2("Cinnamon Toast Crunch", 10,
+4, "Toothless McGee");
+
+// Challenge II
+// Add a method to the Cereal class called makeYouFat
+// in the method, print how the cereal will make you fat if you eat too much of it
+
+
+
+
+
