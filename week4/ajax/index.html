@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- declare our angular app - now available to everything within the <html> tag section -->
 <html ng-app="pokeapp">
     <head>
         <title>Ajax</title>
@@ -6,9 +7,17 @@
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
         <script src="main.js"></script>
     </head>
+    <!--define the angular controller for Pokemon, available to everything in the <body> section-->
     <body ng-controller='PokeController as pCtrl'>
         <h1>{{ pCtrl.text }}</h1>
-        <div>
-        </div>
+
+        <!--the PokeController has a poke object it got back from the http request-->
+        <!--we can use any of the properties in that object through the pCtrl.poke angular object-->
+        <h3>{{ pCtrl.poke1.name }} weighs {{ pCtrl1.poke.weight }} pounds and is {{ pCtrl1.poke.height }} inches tall.</h3>
+        <h3>{{ pCtrl.myPoke.name }} weighs {{ pCtrl.myPoke.weight }} pounds and is {{ pCtrl.myPoke.height }} inches tall.</h3>
+    
+        <form ng-submit="pCtrl.getMyPokemon()">
+            <input type="Number" ng-model="pCtrl.pokeNum" placeholder="Pokemon #"></input>
+        </form>  
     </body>
 </html>

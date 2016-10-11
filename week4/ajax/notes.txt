@@ -27,4 +27,20 @@ API - Application Programming Interface
 Download Postman (https://www.getpostman.com/) to use to analyze and debug
 http requests and responses.
 
+This is what an angular http request looks like:
+
+function getAThing() {
+    $http.get('http://example.com/things/').then(
+        function(data, status){
+            console.log("Got at least one thing");
+        },
+        function(data, status){
+            console.log('I got nothing.');
+        });
+}
+
+or more generally
+
+$http.get('URL').then(function(response,status){}, function(response, status){});
+
 
