@@ -1,0 +1,27 @@
+AJAX - Asynchronous Javascript and XML
+  (Not really XML anymore.  Now it's JSON.)
+  A way that you can make HTTP requests from your javascript running in your browswer 
+  and use the responses to make the page cooler.
+
+A "Singleton" object is a single object.  
+There are never two copies of an instantiation of a singleton class.
+
+HTTP - HyperText Transfer Protocol
+    Rules to transfer hypertext data.
+    HTTP verbs (all use a URL): 
+        GET     - reading/retrieving data from a web server
+        POST    - creating a new resource or sending data on the web server
+        PUT     - replace or updating data on the web server
+        PATCH   - very much like PUT, updates data
+        DELETE  - removes a resource from the web server
+
+Google Wiki HTML Response Code
+    200-2XX - successful completion of request
+    300-3XX - redirect
+    400-4XX - client error (ie. 404 "page not found", 418 "I'm a teapot")
+    500-5XX - server error  
+
+API - Application Programming Interface
+    Web API's are server side interfaces to client requests.
+
+
