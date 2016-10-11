@@ -24,4 +24,7 @@ Google Wiki HTML Response Code
 API - Application Programming Interface
     Web API's are server side interfaces to client requests.
 
+Download Postman (https://www.getpostman.com/) to use to analyze and debug
+http requests and responses.
+
 
