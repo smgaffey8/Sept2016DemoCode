@@ -1,0 +1,31 @@
+harry instanceof Wizard
+draco instanceof Wizard
+tim instanceof Warlock  // tim is a Warlock
+tim instanceof Wizard   // and tim is ALSO a Wizard
+
+// inherit method
+harry.castSpell(0);   // harry can cast spells
+tim.castSpell(0);    // tim can also cast spells
+
+// add sub class method
+tim.command();     // tim can command the undead
+harry.command();  // returns undefined because harry is just a Wizard and only Warlocks can command the undead.
+
+// override method
+tim.castSpell(0);   // now tim casts spells in a very Warlocky way.
+harry.castSpell(0); // but harry still casts his spell the regular Wizard way.
+
+// static method
+Warlock.motto();  // this doesn't use a specific instance
+tim.motto();      // this doesn't work.
+
+// getter/setter
+tim.name
+tim.loudName;     // returns tim's loudName as a Property rather than a Method
+tim.cleanName = "Timothy3"  // set tim's name by cleaning the numbers out of the given name
+tim.name
+
+// object method
+bruce
+tim.asksQuestionsThree();  // tim can ask the questions, even though it isn't prototypal of a Warlock
+bruce.asksQuestionsThree();  // bruce doesn't know the questions because the questions are not prototypal
