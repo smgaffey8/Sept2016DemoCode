@@ -1,0 +1,3 @@
+This is how we pass a parameter (a key value pair)
+
+//refactoru.com/class?id=web101&key=value
