@@ -1,3 +1,15 @@
 This is how we pass a parameter (a key value pair)
 
-//refactoru.com/class?id=web101&key=value
+// refactoru.com/class?id=web101&key=value
+
+app.use // executes for ANY request
+app.get // executes only for GET requests
+app.post // executes only for POST requests
+
+// Postman
+Use Postman (Chrome App) to simulate a client request and view the server response.
+You can set the METHOD (GET, POST, DELETE, PUT, etc), the URL and (if appropriate) the body.
+To set JSON values in the request body, use the POST method, click on Body, use raw format and 
+type the JSON object in the text window (ie. {"key1":"value1", "key2":"value2"} ).  Note that
+node will require strict JSON format so the keys will also need to be in quotes as strings.
+
