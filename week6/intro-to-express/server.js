@@ -15,9 +15,16 @@ var PORT = process.env.PORT || 8080;
 // this is a route handler
 // this serves up this single file from the root directory
 app.get('/', (req, res) => {
-    res.sendFile(__dirname +'/index.html');
+    // this is how we would send raw html in our response
+    // res.send("<h1>This is our one-liner of HTML</h1>")
+    // this is how we would send an entire html file in our response
+    // res.sendFile(__dirname +'/index.html');
+    // and this is an alternate method of sending the entire html file, 
+    // specifying the root directory rather than using the current directory (__dirname)
+    res.sendFile('index.html', {root:"."});
     console.log("Here I am");
 })
+
 // this is a route handler
 // this serves up this single file from the root directory
 app.get('/about.html', (req, res) => {
