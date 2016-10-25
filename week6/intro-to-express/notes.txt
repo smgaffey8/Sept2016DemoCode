@@ -1,0 +1,12 @@
+One time installations are done once, install a tool in /usr/local/bin where they remain until they are uninstalled.
+- install npm
+- npm install -g node, nodemon and other GLOBAL packages and tools
+
+Each time you start a new exercise, lecture, project, etc., start in an empty directory and initialize that directory using:
+- git init
+- npm init
+- npm install --save {modules}
+  - create .gitignore (node_modules)
+
+By keeping each project in it's own directory, you will avoid conflicts and problems with multiple server.js files, index.html files, etc.
+and keep it clear what is and is not part of that application.
