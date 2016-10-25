@@ -1,0 +1,18 @@
+Patient // is Public.  You can see everything in this object
+jane    // is an Object
+jane.illness
+jane.initials()
+jane.bodyPart()
+Patient.listPatients()
+Patient.treatAll()
+jane.prescribe()  // but we want this to be private!
+
+Patient // is Private.  You cannot observe this object
+Person  // is Public.  You can observe the publics parts of this object.
+jane    // is an Object
+jane.illness
+jane.initials()
+jane.bodyPart()
+Person.listPatients()
+Patient.treatAll()
+jane.prescribe()  // this doesn't work.  prescribe() is private.
