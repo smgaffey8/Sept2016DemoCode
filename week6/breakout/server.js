@@ -22,20 +22,20 @@ app.use(bodyParser.json());
 
 // this is an example of custom middleware that works the same way that our third party
 // middleware works, by returning a function and then executing that function in the app.use()
-var myMiddleware = () => {
-    return (req,res,next) => {
+var bearMorgan = () => {
+    return (req, res, next) => {
         console.log('Roar to ' + req.path);
         next();
     };
 };
-app.use(myMiddleware());
+app.use(bearMorgan());
 
 // add a public static route handler from express to deliver ALL files from the public directory
 app.use(express.static('public'))
 
 // set up a basic root route
-app.get('/', function (req, res) {
-  res.sendFile("index.html",{root:'./public/html'});
+app.get('/', function(req, res) {
+    res.sendFile("index.html", { root: './public/html' });
 });
 
 // set up express listener to listen to port 3000
