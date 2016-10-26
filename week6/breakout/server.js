@@ -7,6 +7,8 @@ var express = require('express'),
     // becomes { key:"my value", otherKey:"joe's bar" }
     bodyParser = require('body-parser');
 
+var TheBearHouse = [];
+
 var app = express();
 
 // mount body-parser middleware vertically up top so that all requests
@@ -37,6 +39,33 @@ app.use(express.static('public'))
 app.get('/', function(req, res) {
     res.sendFile("index.html", { root: './public/html' });
 });
+
+app.get('/api/bears', (req, res) => {
+    res.send(TheBearHouse);
+});
+app.post('/api/bears', (req, res) => {
+    console.log("Body : ", req.body);
+    // Add a bear to TheBearHouse
+    TheBearHouse.push({
+        name: req.body.name,
+        accessories: req.body.accessories.split(', '),
+        stuffedness: +req.body.stuffedness
+    });
+
+    // Send a response down
+    res.send('Okie Dokie');
+
+});
+app.delete('/api/bears/:bearIndex', (req, res) => {
+    // {
+    //     bearIndex : '?'
+    // }
+    TheBearHouse.splice(+req.params.bearIndex, 1);
+    res.send(200)
+});
+
+
+
 
 // set up express listener to listen to port 3000
 app.listen(3000, (err) => {
