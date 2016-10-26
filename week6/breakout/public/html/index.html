@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="Bear">
+    <head>
+        <title>Build A Bear</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+        <!-- resource requests on the client side do not know about server file structure -->
+        <!--it is actually making a GET request for this file, so src is URL based, not folder based-->
+        <!--our public static route allows us to serve this up directly from the public folder with the given route-->
+        <script src="/controllers/main.js"></script>
+    </head>
+    <body ng-controller="BearController as bCtrl">
+        <h1>Build a Bear</h1>
+        <h3>{{ bCtrl.greeting }}</h3>
+    </body>
+</html>
