@@ -1,0 +1,20 @@
+Model/View/Controller
+
+Fat Client
+- More work on the front end, ie Angular (the client builds the html dynamically)
+- best for desktops/laptops with some computing power
+
+Thin Client
+- More work on the back end, ie. ejs (where the server builds the html and sends it complete)
+- best for mobile apps and clients with little computing power
+
+Directory structure
+
+(root)
+public  (client view)
+    - html (html view)
+    - style (css, view)
+    - js (angular controllers)
+    - model (models - angular factories)
+controllers (back-end controllers, express route handlers)
+models (back-end hard coded data, mongoose)
