@@ -9,8 +9,11 @@ Thin Client
 - best for mobile apps and clients with little computing power
 
 Directory structure
+(this is a convention, not a requirement)
 
 (root)
+server.js
+routes.js
 public  (client view)
     - html (html view)
     - style (css, view)
