@@ -4,7 +4,7 @@ var Users = require('../models/users');
 // this is a way to explicitely define a route handler
 function getItAll(req, res) {
     // look at the entire request object (very long)
-    console.log("Request:", req);
+    // console.log("Request:", req);
     res.json(Users.findAll());
 };
 
@@ -14,10 +14,10 @@ module.exports = {
     // this is an anonymous way to define a route handler
     getUser: (req, res) => {
         // let's take a look at what is in the request
-        console.log(
-            "Query:", req.query,
-            "Path:", req.path,
-            "Body:", req.body);
+        // console.log(
+        //     "Query:", req.query,
+        //     "Path:", req.path,
+        //     "Body:", req.body);
         // get the query string parameter named 'id' and 
         // use as an index for the user to find
         // the URL route path will look like /api/user?id=1
@@ -30,5 +30,11 @@ module.exports = {
                 { message: 'Unknown user' }
             );
         }
+    },
+    add: (req, res) => {
+        // use the model to add the new user to the users array
+        Users.add(req.body);
+        // send back the same data that we added to the users array
+        res.send(req.body);
     }
 }

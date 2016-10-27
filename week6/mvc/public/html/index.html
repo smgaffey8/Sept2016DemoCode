@@ -7,5 +7,12 @@
     </head>
     <body ng-controller="MVCController as mCtrl">
         {{ mCtrl.greeting }}
+
+        <form ng-submit="mCtrl.addUser()">
+            <input type="text" ng-model='mCtrl.newUser.Name' placeholder="Name">
+            <input type="text" ng-model='mCtrl.newUser.Email' placeholder="Email">
+            <input type="text" ng-model='mCtrl.newUser.Age' placeholder="Age">
+            <input type="submit">
+        </form>
     </body>
 </html>

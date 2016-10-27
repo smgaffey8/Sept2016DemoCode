@@ -20,4 +20,6 @@ module.exports = (app) => {
     app.get('/api/users', API.getAll);
     // route to handle getting all user (expects a query parameter of id)
     app.get('/api/user', API.getUser);
+    // route to add a new user
+    app.post('/api/user', API.add);
 }
