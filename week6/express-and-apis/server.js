@@ -11,10 +11,10 @@ var app = express();
 // mount logger middleware
 app.use(logger);
 
-// mount static file server
+// mount static file server middleware
 app.use(express.static('public'));
 
-// mount routes middleware
+// mount master routes
 Routes(app);
 
 app.listen(PORT, (error) => {
