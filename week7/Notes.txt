@@ -36,6 +36,12 @@ To show collections in a database: show collections
 
 If interacting with a collection called contactInfo for example:
 
+Inserting a single document:
+db.contactInfo.insert({fname: 'Bob', lname: 'Johnson', phone: '303-111-1111'})
+
+Inserting multiple documents (can pass the insert method an array of documents to insert):
+db.contactInfo.insert([{ fname: 'Jethro', lname: 'Tull', phone: '303-222-2222' }, { fname: 'Eric', lname: 'Clapton', phone: 303-333-3333' }])
+
 Finding documents that match a given criteria: 
 db.contactInfo.find({}) 
     -The object passed to the find method is the query. It can be an empty object to find all documents.
