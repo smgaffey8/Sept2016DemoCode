@@ -1,0 +1,74 @@
+Mongo Intro
+
+SQL Databases:
+    -Data is stored in flat tabular systems
+    -Much like a spreadsheet
+    -Query-based language for accessing Data
+    -Examples: MySQL, PostgreSQL
+
+NoSQL Databases:
+    -Developed to overcome limitations of SQL concerning scale and replication
+    -Structureless means many different styles, such as document based, key-value, and graph databases
+    -Uses API to manipulate databases
+    -Faster than SQL because of flat-file and weak associations
+
+Mongo (from Humongous)
+    -Written in C++, very fast document oriented data storage
+    -Built in support for scaling
+    -A flat-file database, which means all data is stored in a single file
+    -Documents are stored as JSON-like sets
+
+Terminology:
+    -Document: A single entry made up of one or more properties (key-value pairs). In database terms this is referred to as a record. Think of it as a row in a spreadsheet.
+    -Collection: A group of records. In database terms, this is commonly referred to as a table. Think of this as a spreadsheet.
+    -Database: A group of collections. Think of this as a worksheet, made up of multiple spreadsheet tabs.
+
+To start mongo database:
+On Mac/Linux: sudo mongod
+On Windows: mongod
+
+Then you will need to open a new terminal window and connect to the database using the command: mongo
+
+Commands:
+To list all databases: show dbs
+To switch to a database: use <database_name>
+To show collections in a database: show collections
+
+If interacting with a collection called contactInfo for example:
+
+Finding documents that match a given criteria: 
+db.contactInfo.find({}) 
+    -The object passed to the find method is the query. It can be an empty object to find all documents.
+db.contactInfo.find({fname: 'Bob'}) 
+    -This will find all documents that have the property fname with a value of 'Bob'
+db.contactInfo.findOne({})
+    -This will find only one document that matches the given criteria (will return the first one it finds if there are multiple matches)
+db.contactInfo.find({}).pretty()
+    -The pretty method will print the results of the query as easier to read JSON
+db.contactInfo.find({}).sort({fname:1})
+    -Sorts the collection based on the property name
+
+To update a document:
+db.contactInfo.update({fname: 'Bob'},{fname: 'Rob', lname: 'Johnson'})
+    -This will change a single document that matches the criteria to be the new document information (note that this replaces the entire document!)
+
+To update multiple documents:
+db.contactInfo.update({}, { $set: {state: 'CO'} }, { multi:true })
+    -This will add state='CO' to all documents
+Generically, it is: db.collectionName.update({criteria}, {update}, {options})
+
+There are multiple update operators. The most common are:
+    -$set: to set a property
+    -$unset: to remove a property
+    -$inc: to increment a property's value
+
+To remove all documents that match the criteria:
+db.contactInfo.remove({fname: 'Bob'})
+
+To remove an entire collection:
+db.contactInfo.drop()
+    -Deletes the contactInfo collection
+
+To remove an entire database:
+db.dropDatabase()
+    -This will remove or 'drop' the currently selected database (the database currently being used)
