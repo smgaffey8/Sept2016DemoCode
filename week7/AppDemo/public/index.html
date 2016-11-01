@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="ToDoApp" >
+
+    <head>
+        <title>Git'er Duuun!</title>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+
+    <body ng-controller="todoController as tdCtrl">
+        <h1>Git'er Duuun!</h1>
+        <ul>
+            <li ng-repeat="todo in tdCtrl.todos">
+                {{todo.title}}
+                <input type="checkbox"
+                       ng-model="todo.done"
+                ng-click="tdCtrl.markDone(todo)">
+            </li>
+        </ul>
+        <form ng-submit="tdCtrl.addTodo()" >
+            <input ng-model="tdCtrl.newTodo.title"
+                   placeholder="To do item" >
+            <input type="submit" >
+        </form>
+            
+    </body>
+</html>

@@ -15,6 +15,7 @@ module.exports = (app) => {
     });
 
     app.post('/api/todos', (req, res) => {
+        console.log('In app.post, body:', req.body);
         new Todo(req.body).save((err, todo) => {
             if(err) {
                 console.error(err);
@@ -24,4 +25,18 @@ module.exports = (app) => {
             }
         });
     });
+
+    app.put('/api/todos', (req,res) => {
+        console.log('in app.put, body: ', req.body);
+        Todo.update({ '_id': req.body._id },
+                    { 'done' : req.body.done },
+                    function(err, doc){
+                        if(err){
+                            console.error('app.put update error! ', err);
+                        } else {
+                            console.log('Successful update!')
+                        }
+                    });
+    });
+
 }
