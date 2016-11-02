@@ -5,8 +5,8 @@ homeController.$inject = ['heroesFactory'];
 
 function homeController (heroesFactory){
     var home = this;
-
-    home.greeting = 'Welcome to the Heroes of AJAX!'
+    home.newHero = {};
+    home.greeting = 'Welcome to the Heroes of AJAX!';
 
     // heroesFactory.createHero().then
 
@@ -14,6 +14,7 @@ function homeController (heroesFactory){
         heroesFactory.createHero(home.newHero)
             .then(function(returnData){
                 console.log('Response from server : ', returnData)
+                home.newHero = {}; // reset the form
             });
     }
 }
