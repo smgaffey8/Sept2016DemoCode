@@ -9,6 +9,11 @@ function heroesFactory ($http) {
 
         createHero : function(heroData){
             return $http.post('/api/heroes', heroData)
+        },
+
+        getHero : function(heroID){
+            heroID = heroID ? '/' + heroID : ''
+            return $http.get('/api/heroes' + heroID)
         }
 
     }
