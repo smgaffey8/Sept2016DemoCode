@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="Heroes">
+    <head>
+        <title>Heroes of Ajax!</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+        <script src="/js/module.heroes.js"></script>
+        <script src="/js/controller.home.js"></script>
+        <script src="/js/factory.heroes.js"></script>
+        
+    </head>
+    <body ng-controller="homeController as home">
+            <h1>{{home.greeting}}</h1>
+    </body>
+</html>

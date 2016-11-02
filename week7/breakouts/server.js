@@ -9,6 +9,7 @@ mongoose.connect('mongodb://localhost/heroes-of-ajax');
 var app = express();
 
 // Middleware
+app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended:true}), bodyParser.json());
 
