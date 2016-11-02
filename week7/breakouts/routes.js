@@ -9,7 +9,16 @@ module.exports = (app) =>{
     
     app.post('/api/heroes', Heroes.create);
     
-    // app.get('/api/heroes')
+    app.get('/api/heroes', Heroes.get);
+    app.get('/api/heroes/:id', Heroes.get);
+    
+
+    // app.get('/:username')
+    // app.get('/devaio')
+    // app.get('/jiminikiz')
+    // app.get('/jiminikiz')
+    
+    
     
 
 
