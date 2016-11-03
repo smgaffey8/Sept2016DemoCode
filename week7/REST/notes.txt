@@ -1,0 +1,35 @@
+REST (Re)presentational (S)tate (T)ransfer
+
+REST is a convention, not a framework or tool. 
+It makes http requests/responses more standardized and understandable.
+
+stateless - http requests do not depend on any previous request (ie. GET lastPurchase)
+    All state information is stored on the client in sessions, cookies, etc and passed in with every request.
+
+idempotent - same effect as running the command one time (ie. GET, PUT, DELETE)
+
+safe - same effect as running the command zero times (ie. GET)
+
+
+Methods are the VERBS:
+    POST (Create) - not idempotent, will likely modify the server state/database, usually creates a new resource
+    GET (Read) - safe, doesn't affect server state, used to retrieve a resource
+    PUT (Update) - idempotent, only changes server state on first request, typically modifies a resource, may create a unique resource
+    DELETE (Remove) - idempotent, deletes a specific resource on the first request and does nothing on subsequent requests
+
+URLs are the NOUNS (ie. account, user, book)
+
+Method and URL describe an action to be taken on a server resource.
+
+Responses are RESTful when they supply meaningful status codes:
+    - 200: successful
+    - 201: created
+    - 204: no content
+    - 304: not modified (ie. response to a duplicate PUT request)
+    - 400: malformed request
+    - 403: forbidden
+    - 404: not found
+    - 500: server error
+
+
+
