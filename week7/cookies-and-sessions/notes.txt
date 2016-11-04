@@ -1,0 +1,23 @@
+Cookies / Sessions
+
+Cookies
+    -Store data
+        -Stored locally in the browser
+        -Stored per website
+        -Just key value pairs
+        -Can be temporary or permanent
+
+    -Where do they come from?
+        -The webserver is who tells the browser to store cookies
+        -Cookie information is passed in HEADERS
+
+    response.writeHead(200, {
+        "Content-Type": "image/jpg",
+        "Set-Cookie": "name=bill&high-contrast=true"
+    })    
+
+Sessions
+    -Object that represents information about a user (stored in the server memory)
+        -How the server remembers who you are
+    -Cookies are sent up from the browser to the server on EVERY request
+        -As a HEADER on every HTTP request
