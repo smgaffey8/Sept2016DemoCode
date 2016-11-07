@@ -7,10 +7,12 @@
         <script src="/js/module.heroes.js"></script>
         <script src="/js/controller.home.js"></script>
         <script src="/js/factory.heroes.js"></script>
-        
+
     </head>
     <body ng-controller="homeController as home">
             <h1>{{home.greeting}}</h1>
+
+            <p><a href="/logout">Logout</a></p>
 
             <form ng-submit="home.createHero()">
                 <input class="form-control" ng-model="home.newHero.name" placeholder="Name">

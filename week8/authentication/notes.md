@@ -19,6 +19,13 @@ First-Party Auth : YOUR SRVER. You are handling the auth.
 
 - Example : `?q=This%20awesome%20sentence`
 
+### Client sessions
+- awesome npm module for encrypted cookies
+- has a built-in cookie parser that knows how to decrypt cookies
+- is developed by Mozilla
+- is awesome
+
+
 ## Guide to adding Auth to your app
 
 1. Add a `User` model
