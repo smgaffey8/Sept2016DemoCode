@@ -1,4 +1,5 @@
-var Heroes = require('./controllers/heroes');
+var Heroes = require('./controllers/heroes'),
+    Auth = require('./controllers/auth');
 
 module.exports = (app) =>{
 
@@ -7,7 +8,7 @@ module.exports = (app) =>{
     // app.post('/login')
 
     // app.get('/register')
-    // app.post('/register')
+    app.post('/register', Auth.register);
 
     app.post('/api/heroes', Heroes.create);
     app.get('/api/heroes', Heroes.get);
