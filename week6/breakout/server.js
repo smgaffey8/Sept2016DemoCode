@@ -68,7 +68,7 @@ app.delete('/api/bears/:bearIndex', (req, res) => {
 
 
 // set up express listener to listen to port 3000
-app.listen(3000, (err) => {
+app.listen(8080, (err) => {
     if (err) {
         console.log("Error:", err);
         process.exit(1);
