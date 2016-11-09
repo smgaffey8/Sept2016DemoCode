@@ -3,14 +3,12 @@
 
 Essentially, a good first-party authentication strategy will use some form of encryption and hashing technique in order to protect users of a service.
 
-First-Party Auth : YOUR SRVER. You are handling the auth.
+First-Party Auth: YOUR SRVER. You are handling the auth.
 
 ### Hashing
 - Hashing protects plain-text values
 - Hashing is a ONE WAY THING.
 - Mathematically, the algorithm that hashes a plain text value is impossible to reverse.
-
-
 
 ### Encoding / Decoding
 - `%20` => Space (example of an encoded value)
@@ -25,31 +23,10 @@ First-Party Auth : YOUR SRVER. You are handling the auth.
 - is developed by Mozilla
 - is awesome
 
-
-## Guide to adding Auth to your app
-
+## Steps to adding Auth to your app
 1. Add a `User` model
-
-```javascript
-
-
-```
-
 2. Add a `POST` route to create a user [register]. (good time to test creation with POSTMAN)
-
-```javascript
-
-```
-
 3. Add a `POST` route to authenticate a `User` [login].
-
-```javascript
-
-```
-
 4. Add middleware to protect the areas of your site/app that require a login to access.
 
-
-```javascript
-
-```
+> http://github.com/jiminikiz/mean-auth
