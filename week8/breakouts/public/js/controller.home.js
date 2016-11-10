@@ -1,9 +1,9 @@
 angular.module('Heroes')
     .controller('homeController', homeController);
 
-homeController.$inject = ['heroesFactory'];
+homeController.$inject = ['heroesFactory', 'hqFactory'];
 
-function homeController (heroesFactory){
+function homeController (heroesFactory, hqFactory){
     var home = this;
     home.newHero = {};
     home.hero = {};
@@ -11,6 +11,12 @@ function homeController (heroesFactory){
     home.greeting = 'Welcome to the Heroes of AJAX!';
 
     // heroesFactory.createHero().then
+
+    hqFactory.getHqs()
+        .then(function(returnData){
+            console.log('HQs!', returnData.data)
+            home.hqs = returnData.data
+        });
 
     home.createHero = function(){
         heroesFactory.createHero(home.newHero)
@@ -35,5 +41,5 @@ function homeController (heroesFactory){
             })
     }
     home.getHero(); // get many
-    home.getHero("581a2941fba8172b747af12f"); // get one
+    // home.getHero("581a2941fba8172b747af12f"); // get one
 }

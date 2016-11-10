@@ -6,7 +6,10 @@ var heroSchema = mongoose.Schema({
     powers : {type : Array, default : []},
     facialHair : {type : Boolean, default : false},
     backStory : {type : String, default : 'So mysterious... could be Bruce Valanche'},
-
+    // sidekick : {
+    //     type : mongoose.Schema.ObjectId,
+    //     ref  : 'Hero' 
+    // },
     headquarter : { 
         type : mongoose.Schema.ObjectId,
         ref  : 'heroHQ' 
